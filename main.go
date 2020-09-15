@@ -10,22 +10,6 @@ import (
 	"github.com/gorilla/mux"
 )
 
-//type Analysis struct {
-//	ID	string	`json:"taskId,omitempty"`
-//	ServerUrl string `json:"serverUrl,omitempty"`
-//	Status	string `json:"status,omitempty"`
-//	AnalysedAt string `json:"analysedAt,omitempty"`
-//	Revision string	`json:"revision,omitempty"`
-//	Project  Project
-
-//}
-
-//type Project struct {
-//	Key string `json:"project"`
-//	Name string `json:"name"`
-//	Url  string `json:url"`
-//}
-
 func ParseJson(w http.ResponseWriter, r *http.Request) {
 	var result map[string]interface{}
 	_ = json.NewDecoder(r.Body).Decode(&result)
